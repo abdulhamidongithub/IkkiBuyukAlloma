@@ -22,3 +22,4 @@ class TopicAudiosApiView(APIView):
         ser = AudioSer(all_audios, many=True)
         return Response(ser.data)
 
+

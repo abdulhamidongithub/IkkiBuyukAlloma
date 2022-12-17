@@ -6,8 +6,13 @@ class Topic(models.Model):
 
 class Audio(models.Model):
     name = models.CharField(max_length=300)
-    fayl = models.FileField()
+    fayl = models.FileField(null=True)
+    rn = models.PositiveIntegerField(default=1)
+    duration = models.DurationField(null=True, blank=True)
+    size = models.FloatField(null=True, blank=True)
     topic = models.ForeignKey(Topic, on_delete=models.SET_NULL, null=True)
     def __str__(self):
         return self.name
+
+
 
