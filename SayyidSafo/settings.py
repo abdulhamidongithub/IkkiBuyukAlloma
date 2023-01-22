@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'asosiy',
     'rest_framework',
     'drf_yasg',
+    'django_cleanup',
 ]
 
 MIDDLEWARE = [
